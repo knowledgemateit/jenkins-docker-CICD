@@ -29,6 +29,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
+                sh "sudo chmod 666 /var/run/docker.sock"
                 echo "Building Docker Image: ${IMAGE_NAME}"
                 // Build with both the specific version and 'latest' tag
                 sh "docker build -t ${IMAGE_NAME} -t ${DOCKER_HUB_REPO}:latest ."
