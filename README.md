@@ -34,6 +34,10 @@ sudo systemctl enable docker
 
 sudo systemctl enable jenkins
 
+# pipeline docker sock issue fix
+
+sudo chmod 666 /var/run/docker.sock
+
 -------------------------------------
 
 # tomcatTomcat 7.0.57, 8091, "admin/admin" 
