@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_HUB_REPO = 'rajusw804/projectrepo'
         DOCKER_HUB_CREDS = credentials('docker-hub-credentials')
-        VERSION         = "1.0.${BUILD_NUMBER}"
+        VERSION         = "2.0.${BUILD_NUMBER}"
         IMAGE_NAME      = "${DOCKER_HUB_REPO}:${VERSION}"
         // Unique container name to avoid conflicts during parallel builds
         CONTAINER_NAME  = "tomcat-test-${BUILD_NUMBER}" 
